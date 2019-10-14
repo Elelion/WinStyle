@@ -1,0 +1,38 @@
+﻿CREATE DATABASE winstyle CHARACTER SET 'utf8';
+
+CREATE TABLE professions (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	position VARCHAR(48),
+	min_salary FLOAT(8),
+	max_salary FLOAT(8)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+CREATE TABLE workers (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name TEXT(32),
+	sur_name TEXT(32),
+	position VARCHAR(64),
+	image_file VARCHAR(255)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+CREATE TABLE payment (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	image_file VARCHAR(255),
+	name TEXT(32),
+	sur_name TEXT(32),
+	position VARCHAR(64),
+	salary FLOAT(8),
+	-- bonus FLOAT(8),
+	month INT(2),
+	year INT(4)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+CREATE TABLE users (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name TEXT(32),
+	sur_name TEXT(32)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
