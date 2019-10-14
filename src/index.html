@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="yandex-verification" content="???" />
+  <meta name="google-site-verification" content="???" />
+  <meta name="keywords" content="SEO" />
+  <meta name="description" content="SEO" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="shortcut icon" type="./src/images/x-icon" href="src/images/???" />
+  <title>winstyle</title>
+</head>
+
+<body>
+  <!-- NOTE: control panel for table filling -->
+  <div class="control__panel">
+    <form method="post" action="./lib/events.php">
+      <input name="clearAll" type="submit"
+        value="Очистить все БД">
+
+      <input name="professionsFill" type="submit"
+        value="(1) Заполнить БД professions">
+
+      <input name="usersFill" type="submit"
+        value="(2) Заполнить БД users">
+
+      <input name="workersFill" type="submit"
+        value="(3) Заполнить БД workers">
+
+      <input name="paymentFill" type="submit"
+        value="(4) Заполнить БД payment">
+    </form>
+  </div>
+
+  <!-- ** -->
+
+  <div class="table__mobile">
+    <table class="table__salary" cellspacing="0" cellpadding="1" border="1">
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Должность</th>
+          <th>Зарплата</th>
+          <th>Аватар</th>
+          <th>Месяц</th>
+          <th>Год</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php $month->outPutData(); ?>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ** -->
+
+  <div class="navigation__panel">
+    <form method="post" action="">
+      <input name="back" type="submit" value="← туда">
+      <input name="foward" type="submit" value="сюда →">
+    </form>
+  </div>
+
+  <!-- ** -->
+
+  <div class="currency__panel">
+    <form method="post" action="">
+      <select name="currency">
+        <option value = 'ru'>Ru</option>
+        <option value = 'eu'>Eu</option>
+      </select>
+      <input type="submit" name="currencyApply" value="Применить"/>
+    </form>
+
+    <p>Текущая валюта: <span><?= getCurrency(); ?></span></p>
+  </div>
+
+  <!-- ** -->
+
+
+  <script src="./src/js/view.js" defer="defer"></script>
+</body>
+</html>
