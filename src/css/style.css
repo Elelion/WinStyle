@@ -1,0 +1,82 @@
+.control__panel {
+  width: 850px;
+  margin: 0 auto 0 auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .control__panel {
+    width: 420px;
+  }
+
+  .control__panel input {
+    width: 200px;
+  }
+}
+
+/**/
+
+.table__salary {
+  width:100%;
+  font-size:12px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #729ea5;
+  border-collapse: collapse;
+}
+
+.table__salary th {
+  padding: 8px;
+  font-size:12px;
+  background:#d7ecef;
+  border-width: 1px;
+  border-color: #729ea5;
+  border-style: solid;
+}
+
+.table__salary tr {
+  background:#ffffff;
+}
+
+.table__salary td {
+  padding: 8px;
+  font-size:12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #729ea5;
+}
+
+.table__mobile {
+  width:100%;
+  overflow:auto;
+}
+
+.table__salary th, .table__salary td {
+  text-align:center;
+}
+
+.table__salary tr:hover {
+  background:#f1f4f4;
+}
+
+/**/
+
+.table__view {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/**/
+
+.navigation__panel {
+  float: right;
+  width: 200px;
+  margin: 10px 0 0 0;
+}
+
+/**/
+
+.currency__panel {
+  width: 200px;
+  height: 70px;
+}
